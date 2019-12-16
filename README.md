@@ -9,6 +9,10 @@
 ## [Tipos Básicos](#DataTypes)
 ## [Operadores](#Operadores)
 
+# Instalação
+
+[Passos para instalação](https://golang.org/doc/install)
+
 # Estrutura
 
 ```go
@@ -40,11 +44,11 @@ A visibilidade em **GO** é definida por convenções, como muitas coisas nessa 
 
 ```go
 func functionprivada(){
-
+// função privada
 }
 
 func FunctionPublica(){
-
+// função pública
 }
 ```
 
