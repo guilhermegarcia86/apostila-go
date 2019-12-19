@@ -1,19 +1,30 @@
 
 # Golang
 
-## [História](#Historia)
-## [Instalação](#Instalação)
-## [Estrutura](#Estrutura)
-## [Visibilidade](#Visibilidade)
-## [Variáveis e Constantes](#Var_e_Const)
-## [Tipos Básicos](#DataTypes)
-## [Operadores](#Operadores)
 
-# Instalação
+#### Conteúdo
+[História](#hist)   
+[Instalação](#inst)     
+[Estrutura](#estrutura)     
+[Visibilidade](#visibilidade)   
+[Variáveis e Constantes](#varConst)     
+[Tipos Básicos](#dataTypes)     
+[Operadores](#operadores)       
+[Estrutura](#estrutura)       
+
+<a name="hist"/>
+
+## História
+
+<a name="inst"/>
+
+## Instalação
 
 [Passos para instalação](https://golang.org/doc/install)
 
-# Estrutura
+<a name="estrutura"/>
+
+## Estrutura
 
 ```go
 
@@ -38,7 +49,9 @@ import (
 
 E seguido das funções variáveis e etc.
 
-# Visibilidade
+<a name="visibilidade"/>
+
+## Visibilidade
 
 A visibilidade em **GO** é definida por convenções, como muitas coisas nessa linguagem, e para visibilidade de **structs**, **functions**, **variaveis**, **contantes** e etc é usado a seguinte convenção, tudo o que começar com letra maiúscula será público e tudo o que começar com letra minúscula será privado, exemplo:
 
@@ -52,7 +65,9 @@ func FunctionPublica(){
 }
 ```
 
-# Variáveis e Constantes
+<a name="varConst"/>
+
+## Variáveis e Constantes
 
 Podemos declarar as variáveis com a palavra _var_ seguida do tipo e seu valor:
 ```go
@@ -79,7 +94,9 @@ num := 42
 ```
 Com operador ":=" é o que faz a inferência de tipos automáticamente, isso que dizer que o tipo é definido de forma automática. Porém como o **_GO_** é uma linguagem fortemente tipada não podemos mudar o tipo de variável após a sua declaração.
 
-# Tipos Básicos
+<a name="dataTypes"/>
+
+## Tipos Básicos
 Os tipos básicos da linguagem:
 
 bool _booleano_
@@ -98,9 +115,11 @@ float32 float64 (pontos flutuantes)
 
 complex64 complex128
 
-# Operadores
+<a name="operadores"/>
 
-## Atrbibuição
+## Operadores
+
+### Atribuição
 ```go
 func main() {
 
@@ -113,19 +132,94 @@ func main() {
 
 ```
 
-## Aritméticos
+### Aritméticos
 ```go
 func main() {   
     a := 3   
     b := 2   
     
-    Soma => a+b   
-    Subtração => a-b   
-    Divisão => a/b   
-    Multiplicação => a*b   
-    Mod => a%b
+//Soma 
+a+b
+
+//Subtração 
+a-b
+
+//Divisão 
+a/b
+    
+//Multiplicação
+a*b   
+    
+//Mod
+a%b
 ```
 
-## 
+### Lógicos
+```go
 
+resultI := true
+resultII := false
 
+AND => resultI && resultII = false
+OR => resultI || resultII = true
+NOT => !(resultI && resultII) = true
+```
+
+### Relacionais
+```go
+valueI := 1
+valueII := 2
+
+//Comparação
+valueI == valueII //false
+
+//Diferença
+result := valueI != valueII //true
+
+//Maior
+valueI > valueII //false
+
+//Maior igual
+value >= valueII //false
+
+//Menor
+valueI < valueII //true
+
+//Menor igual
+valueI <= valueII //true
+```
+
+<a name="estrutura"/>
+
+## Estrutura
+
+### If/Else
+```go
+value := 2
+
+if value > 3 {
+    fmt.Println("Valor maior que 3")
+} else {
+    fmt.Println("Valor menor que 3")
+}
+
+// If/Else aninhado
+if value > 4 {
+    fmt.Println("Valor maior que 4")
+} else if value > 3 {
+    fmt.Println("Valor maior que 3")
+} else {
+    fmt.Println("Valor menor que 3")
+}
+```
+
+### For
+```go
+for i := 0; i <= 10; i ++ {
+    fmt.Printf("%d ", i)
+}
+```
+
+### Switch
+```go
+```
